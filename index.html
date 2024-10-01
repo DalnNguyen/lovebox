@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div class="love-card">
+    <button class="btn-go js-btn-go">GO!</button>
+        <div class="love-card-container">
+            <div class="love-card-heading"><i class="ti-close"></i></div>
+            <div class="love-card-body">
+               <h3 class="love-title">DO YOU LOVE ME? <i class="ti-heart"></i></h3>
+                 <button class="love-btn js-btn-yes">YES</button>
+                 <button class="love-btn js-btn-no">NO</button>
+            </div>
+        </div>
+        <div class="love-card-rep">
+            <div class="love-rep-yes">
+                <img src="./assets/img/icon-rep-yes.png" alt="" class="rep-yes" >
+                <h3>Em iu dỏi nòoooo</h3>
+                <button class="close-rep-btn">CLOSE</button>
+            </div>
+            <div class="love-rep-no">
+                <img src="./assets/img/icon-rep-no.png" alt="" class="rep-no">
+                <h3>Á à em tạo phản hả</h3>
+                <button class="close-rep-btn2">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const goBtn = document.querySelector('.js-btn-go')
+        const closeBtn = document.querySelector('.ti-close')
+        const modal = document.querySelector('.love-card-container')
+        function openLove(){
+            modal.classList.add("open")
+        }
+        function closeLove(){
+            modal.classList.remove('open')
+        }
+        closeBtn.addEventListener('click', closeLove )
+        goBtn.addEventListener('click',openLove)
+    </script>
+    <script>
+        const repBtnYes = document.querySelector('.js-btn-yes')
+        const closerep = document.querySelector('.close-rep-btn')
+        const boxrep = document.querySelector('.love-rep-yes')
+
+
+        function openRep(){
+            boxrep.classList.add('open')
+        }
+
+        function closebtn1(){
+            boxrep.classList.remove('open')
+        }
+
+        closerep.addEventListener('click', closebtn1)
+        repBtnYes.addEventListener('click',openRep )
+    </script>
+<!-- no -->
+<script>
+    const repBtnNo = document.querySelector('.js-btn-no')
+    const closerep2 = document.querySelector('.close-rep-btn2')
+    const boxrep2 = document.querySelector('.love-rep-no')
+
+
+    function openRep1(){
+        boxrep2.classList.add('open')
+    }
+
+    function closebtn2(){
+        boxrep2.classList.remove('open')
+    }
+
+    closerep2.addEventListener('click', closebtn2)
+    repBtnNo.addEventListener('click',openRep1)
+</script>
+</body>
+</html>
